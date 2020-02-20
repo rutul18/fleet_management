@@ -1,0 +1,30 @@
+<odoo>
+  <record id="view_wizard_close_reason" model="ir.ui.view">
+        <field name="name">rent.close.reason.form</field>
+        <field name="model">close.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <separator string="Reason To close Rent" />
+                <group>
+                    <field name="reason" required="1"
+                        placeholder="Enter Reason to close rent contract..."/>
+                </group>
+                <footer>
+                    <button name="close_reason" type="object"
+                        string="Close" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link"
+                        special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!--  Action for Close Rent Wizard -->
+    <record id="action_wizard_close_reason" model="ir.actions.act_window">
+        <field name="name">Rent Close</field>
+        <field name="res_model">close.reason</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

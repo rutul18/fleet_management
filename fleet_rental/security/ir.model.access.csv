@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vehicle_rental,Access.vehicle.rental,model_vehicle_rental,,1,1,1,1
+access_rent_type,Access.rent.type,model_rent_type,,1,1,1,1
+access_tenancy_rent_schedule,Access.tenancy.rent.schedule,model_tenancy_rent_schedule,,1,1,1,1
+access_maintenanace_Cost,Access.maintenanace.cost,model_maintenance_cost,,1,1,1,1
+access_maintenance_type,Access.maintenance.type,model_maintenance_type,,1,1,1,1

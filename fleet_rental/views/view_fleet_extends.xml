@@ -1,0 +1,14 @@
+<!-- Inherit view of Fleet Vehicle Registration -->
+<odoo>
+        <record id='fleet_vehicle_rent_form' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.rent.form</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+              <xpath expr="//form/sheet/group/group/field[@name='car_value']" position="after">
+                <field name="income_acc_id" string="Income Account" required="1"/>
+                <field name="expence_acc_id" string="Expence Account" required="1"/>
+              </xpath>
+        </field>
+    </record>
+</odoo>
