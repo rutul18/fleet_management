@@ -515,4 +515,95 @@
             </tree>
         </field>
     </record>
+
+       <!-- Form view of Damage Type -->
+    <record id='damage_type_form_view' model='ir.ui.view'>
+        <field name="name">damage.type.form.view</field>
+        <field name="model">damage.types</field>
+        <field name="arch" type="xml">
+            <form string="Damage Types ">
+                <group>
+                    <field name="name" required="1"/>
+                    <field name="code"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+        <!-- tree view of Damage Type -->
+    <record id='damage_type_tree_view' model='ir.ui.view'>
+        <field name="name">damage.type.tree.view</field>
+        <field name="model">damage.types</field>
+        <field name="arch" type="xml">
+            <tree string="Damage Types ">
+
+                <field name="name" required="1"/>
+                <field name="code"/>
+
+            </tree>
+        </field>
+    </record>
+
+     <!-- Action for Damage Type -->
+    <record id="damage_type_action" model="ir.actions.act_window">
+        <field name="name">Damage Types</field>
+        <field name="res_model">damage.types</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem for Damage Type -->
+    <menuitem action="damage_type_action"
+        string="Damage Types" parent="fleet.fleet_configuration"
+        id="damage_type_menu"/>
+
+     <!-- Tree view for color -->
+    <record id="color_color_tree" model='ir.ui.view'>
+        <field name="name">color_color.tree</field>
+        <field name="model">color.color</field>
+        <field name="arch" type="xml">
+            <tree string="Color" editable="top" delete="1">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for color -->
+     <record id="color_color_act" model="ir.actions.act_window">
+        <field name="name">Color</field>
+        <field name="res_model">color.color</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- Menuitem for color -->
+    <menuitem action="color_color_act" id="color_color_menu"
+        parent="fleet.fleet_configuration" sequence="20"/>
+
+<!--    -->
+<!--    &lt;!&ndash; Search view of next odometer increment &ndash;&gt;-->
+<!--    <record model='ir.ui.view' id='next_increment_number_search_view'>-->
+<!--        <field name="name">next.increment.number.search</field>-->
+<!--        <field name="model">next.increment.number</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <filter name="groupby_vehicle_next_increment" string="Vehicle"-->
+<!--                domain="[]" context="{'group_by':'vehicle_id'}" />-->
+<!--                <field name="vehicle_id" />-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    &lt;!&ndash; Action for Odometer increment &ndash;&gt;-->
+<!--    <record model='ir.actions.act_window' id='next_increment_number_tree_act'>-->
+<!--        <field name="name">Odometer Increment</field>-->
+<!--        <field name="res_model">next.increment.number</field>-->
+<!--        <field name="view_type">form</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+
+<!--    &lt;!&ndash; Menuitem for odometer increment &ndash;&gt;-->
+<!--    <menuitem action="next_increment_number_tree_act"-->
+<!--        string="Odometer Increment" parent="fleet.fleet_configuration"-->
+<!--        id="odometer_increment_menu" sequence="4"/>-->
 </odoo>

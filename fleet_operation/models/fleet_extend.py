@@ -339,6 +339,26 @@ class VehicleType(models.Model):
     name = fields.Char(string='Name', size=64, required=True)
 
 
+class DamageTypes(models.Model):
+    _name = "damage.types"
+    _description = "Damage Types"
+
+    name = fields.Char(string="Name")
+    code = fields.Char(string="Code")
+
+
+class NextIncrementNumber(models.Model):
+    """Model Next Increment NUmber."""
+
+    _name = 'next.increment.number'
+    _description = 'Next Increment Number'
+
+    name = fields.Char(string='Name', size=64)
+    vehicle_id = fields.Many2one('fleet.vehicle', string='Vehicle Id')
+    number = fields.Float(string='Odometer Increment')
+
+
+
 # class IrAttachment(models.Model):
 #     """Model Ir Attachment."""
 #
