@@ -1,0 +1,39 @@
+<odoo>
+    <record model='ir.ui.view' id='fleet_repair_type_form_view'>
+        <field name="name">fleet.repair.type.form</field>
+        <field name="model">repair.type</field>
+        <field name="arch" type="xml">
+            <form string="Repair Type">
+               <group>
+                    <field name="name" required="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <!-- View and action for repiar type -->
+    <record model='ir.ui.view' id='fleet_repair_type_tree_view'>
+        <field name="name">fleet.repair.type.tree</field>
+        <field name="model">repair.type</field>
+        <field name="arch" type="xml">
+            <tree string="Repair Type">
+                <field name="name" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Repair Type Action. -->
+    <record id='fleet_repair_type_tree_act' model='ir.actions.act_window'>
+        <field name="name">Repair Type</field>
+        <field name="res_model">repair.type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Repair Type Menu. -->
+    <menuitem action="fleet_repair_type_tree_act"
+        string="Repair Type"
+        parent="fleet.fleet_configuration"
+        id="fleet_repair_type_menu" sequence="2"/>
+
+
+</odoo>

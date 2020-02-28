@@ -358,6 +358,28 @@ class NextIncrementNumber(models.Model):
     number = fields.Float(string='Odometer Increment')
 
 
+class NextServiceDays(models.Model):
+    """Model Next Service Days."""
+
+    _name = 'next.service.days'
+    _description = 'Next Service days'
+
+    name = fields.Char(string='Name', translate=True)
+    vehicle_id = fields.Many2one('fleet.vehicle', string='Vehicle Id')
+    days = fields.Integer(string='Days')
+
+
+class VehicleType(models.Model):
+    """Model Vehicle Type."""
+
+    _name = 'vehicle.type'
+    _description = 'Vehicle Type'
+
+
+    code = fields.Char(string='Code', size=10)
+    name = fields.Char(string='Name', size=64, required=True)
+
+
 
 # class IrAttachment(models.Model):
 #     """Model Ir Attachment."""

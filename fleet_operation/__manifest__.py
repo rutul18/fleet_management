@@ -14,6 +14,7 @@
                 'views/view_fleet_extend.xml',
                 'views/view_fleet_vehicle_service.xml',
                 'views/view_fleet_vehicle_account_operation.xml',
+                'views/view_fleet_service.xml',
                 'data/vehicle_service_sequence.xml'
              ],
 

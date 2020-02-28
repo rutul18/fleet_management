@@ -5,7 +5,7 @@ from datetime import date, datetime
 
 class UpdateEngineInfo(models.TransientModel):
     """Update Engine Info."""
-    print ("::::::::::::::::::::::::::::::::")
+
     _name = 'update.engine.info'
     _description = 'Update Engine Info'
 
@@ -21,7 +21,6 @@ class UpdateEngineInfo(models.TransientModel):
 class UpdateColorInfo(models.TransientModel):
     """Update Color Info."""
 
-    print("::::::::::::::::11::::::::::::::::")
     _name = 'update.color.info'
     _description = 'Update Color Info'
 
@@ -39,7 +38,6 @@ class UpdateColorInfo(models.TransientModel):
 class UpdateVinInfo(models.TransientModel):
     """Update Vin Info."""
 
-    print("::::::::::::::::11::22::::::::::::::")
     _name = 'update.vin.info'
     _description = 'Update Vin Info'
 
@@ -56,7 +54,7 @@ class UpdateVinInfo(models.TransientModel):
 class UpdateTireInfo(models.TransientModel):
     """Update Tire Info."""
 
-    print("::::::::::::::::11::::::::333::::::::")
+
     _name = 'update.tire.info'
     _description = 'Update Tire Info'
 
@@ -77,7 +75,7 @@ class UpdateTireInfo(models.TransientModel):
 class UpdateBatteryInfo(models.TransientModel):
     """Update Battery Info."""
 
-    print("::::::::::::::::11:::::::ddddd:::::::::")
+
     _name = 'update.battery.info'
     _description = 'Update Battery Info'
 

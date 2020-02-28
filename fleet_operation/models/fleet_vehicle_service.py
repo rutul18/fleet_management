@@ -88,12 +88,6 @@ class FleetVehicleLogServices(models.Model):
         print("\:::::Invoice:::", self)
 
 
-
-
-
-
-
-
     wono_id = fields.Integer(string='WONo', help="Take this field for data migration")
     id = fields.Integer(string='ID')
     purchaser_id = fields.Many2one('res.partner', string='Purchaser', related='vehicle_id.driver_id')
@@ -217,6 +211,25 @@ class ServiceRepairLine(models.Model):
                                 string="Complete Date")
     target_date = fields.Date(string='Target Completion')
     complete = fields.Boolean(string='Completed')
+
+
+class RepairType(models.Model):
+    """Repair Type."""
+
+    _name = 'repair.type'
+    _description = 'Vehicle Repair Type'
+
+    name = fields.Char(string='Repair Type')
+
+
+class ServiceCategory(models.Model):
+    """Service Category Model."""
+
+    _name = 'service.category'
+    _description = 'Vehicle Service Category'
+
+    name = fields.Char(string="Service Category")
+
 
 
 

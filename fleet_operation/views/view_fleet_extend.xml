@@ -606,4 +606,90 @@
 <!--    <menuitem action="next_increment_number_tree_act"-->
 <!--        string="Odometer Increment" parent="fleet.fleet_configuration"-->
 <!--        id="odometer_increment_menu" sequence="4"/>-->
+
+
+         <!-- Form view of next service days -->
+    <record id='next_service_days_form' model='ir.ui.view'>
+        <field name="name">next.service.days.form</field>
+        <field name="model">next.service.days</field>
+        <field name="arch" type="xml">
+            <form string="Next Service Days">
+                <group>
+                    <field name="name"/>
+                    <field name="vehicle_id" required="1"/>
+                    <field name="days" required="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view of next service days -->
+    <record id="next_service_days_tree" model='ir.ui.view'>
+        <field name="name">next.service.days.tree</field>
+        <field name="model">next.service.days</field>
+        <field name="arch" type="xml">
+            <tree string="Next Service Days" editable="top" delete="1">
+                <field name="name"/>
+                <field name="vehicle_id" required="1"/>
+                <field name="days" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search view of next service days -->
+    <record id="next_service_days_search" model='ir.ui.view'>
+        <field name="name">next.service.days.search</field>
+        <field name="model">next.service.days</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="groupby_vehicle_next_service_days"
+                string="Vehicle" domain="[]" context="{'group_by':'vehicle_id'}" />
+                <field name="vehicle_id" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for next service days -->
+    <record id="next_service_days_act" model="ir.actions.act_window">
+        <field name="name">Next Service Days</field>
+        <field name="res_model">next.service.days</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem for next service days -->
+    <menuitem action="next_service_days_act" id="next_service_days" parent="fleet.fleet_configuration" sequence="17"/>
+
+    <!-- Form view for Vehicle Type -->
+    <record id='vehicle_type_form' model='ir.ui.view'>
+        <field name="name">vehicle.type.form</field>
+        <field name="model">vehicle.type</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Type">
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view for Vehicle Type -->
+    <record id="vehicle_type_tree" model='ir.ui.view'>
+        <field name="name">vehicle.type.tree</field>
+        <field name="model">vehicle.type</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicle Type" editable="top" delete="1">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Vehicle Type -->
+    <record id="vehicle_type_act" model="ir.actions.act_window">
+        <field name="name">Vehicle Type</field>
+        <field name="res_model">vehicle.type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- Menuitem for Vehicle Type -->
+    <menuitem action="vehicle_type_act" id="vehicle_type" parent="fleet.fleet_configuration" sequence="16"/>
 </odoo>

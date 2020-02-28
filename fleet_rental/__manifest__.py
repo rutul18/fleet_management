@@ -1,7 +1,7 @@
 {
     'name': 'Fleet Vehicle Rent',
     'version': '1.0',
-    'depends': ['fleet', 'account', 'base', 'account'],
+    'depends': ['fleet', 'account', 'base', 'account', 'fleet_operations'],
     'author': 'Rutul ',
     'category': 'Management',
     'summary': """Rental Vehicle Management System

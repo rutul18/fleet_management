@@ -224,4 +224,62 @@
               name="Vehicles Rent"
               parent="menu_vehicle_rental_main"
               action="action_vehicle_rental"/>
+
+
+        <!--Rent Type Form View-->
+    <record id="rent_type_form" model="ir.ui.view">
+        <field name="name">rent.type.form</field>
+        <field name="model">rent.type</field>
+        <field name="arch" type="xml">
+            <form string="Rent Type" >
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="duration" required="1"/>
+                        <field name="renttype" required="1"/>
+                        <!-- <field name="sequence_in_view"/> -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Rent Type Tree View-->
+    <record id="rent_type_tree" model="ir.ui.view">
+        <field name="name">rent.type.tree</field>
+        <field name="model">rent.type</field>
+        <field name="arch" type="xml">
+            <tree string="Rent Type">
+                <field name="name"/>
+                <field name="duration" />
+                <field name="renttype"/>
+                <!-- <field name="sequence_in_view"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <!--Rent Type Search View-->
+    <record model="ir.ui.view" id="rent_type_view_search">
+        <field name="name">rent.type.search</field>
+        <field name="model">rent.type</field>
+        <field name="arch" type="xml">
+            <search string="Search Property">
+                <field name="name"/>
+                <field name="duration"/>
+                <field name="renttype"/>
+            </search>
+        </field>
+    </record>
+
+    <!--Action for Rent Type Views -->
+    <record id="action_rent_type_view" model="ir.actions.act_window">
+        <field name="name">Rent Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rent.type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Rent Type" id="menu_rent_type" parent="fleet.fleet_configuration" action="action_rent_type_view" />
+
 </odoo>
