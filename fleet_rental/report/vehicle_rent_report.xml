@@ -1,0 +1,11 @@
+<odoo>
+	<data>
+		<report
+			id="action_report_vehicle_rental"
+			string="Vehicle Rental"
+			model="vehicle.rental"
+			report_type="qweb-pdf"
+			file="fleet_rental.rental_vehicle_report"
+			name="fleet_rental.rental_vehicle_report"/>
+		</data>
+</odoo>

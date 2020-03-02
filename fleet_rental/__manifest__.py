@@ -1,7 +1,7 @@
 {
     'name': 'Fleet Vehicle Rent',
     'version': '1.0',
-    'depends': ['fleet', 'account', 'base', 'account', 'fleet_operations'],
+    'depends': ['fleet', 'account', 'base', 'account'],
     'author': 'Rutul ',
     'category': 'Management',
     'summary': """Rental Vehicle Management System
@@ -14,6 +14,8 @@
                 'security/ir.model.access.csv',
                 'data/ir_sequence_data.xml',
                 'wizard/view_close_reason.xml',
+		'report/vehicle_rent_report.xml',
+		'report/rent_vehicle_report.xml',
                 'views/view_fleet_vehicle_rent.xml',
                 'views/vehicle_res_user.xml',
                 'views/view_fleet_extends.xml',
